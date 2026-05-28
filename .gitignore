@@ -1,0 +1,19 @@
+# created by virtualenv automatically
+# virtual environment
+.venv/
+venv/
+env/
+
+# python cache
+__pycache__/
+*.pyc
+
+# env files
+.env
+
+# IDE
+.idea/
+.vscode/
+
+# qdrant storage
+qdrant_storage/

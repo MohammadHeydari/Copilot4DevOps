@@ -1,0 +1,28 @@
+{
+  "service": "payment",
+  "endpoints": [
+    {
+      "path": "/pay",
+      "method": "POST",
+      "description": "Process payment transaction",
+      "dependencies": ["bank-api", "fraud-service"],
+      "failure_modes": [
+        "timeout",
+        "declined transaction",
+        "network error"
+      ]
+    },
+    {
+      "path": "/refund",
+      "method": "POST",
+      "description": "Refund a transaction",
+      "dependencies": ["bank-api"],
+      "failure_modes": [
+        "bank rejection",
+        "invalid transaction id"
+      ]
+    }
+  ],
+  "sla": "99.9%",
+  "retries": 3
+}

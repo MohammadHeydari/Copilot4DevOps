@@ -1,0 +1,9 @@
+2026-05-28T10:01:12Z ERROR PaymentService timeout contacting bank API
+2026-05-28T10:01:13Z WARN retry attempt 1 for transaction_id=abc123
+2026-05-28T10:01:14Z ERROR Bank API latency exceeded threshold (5000ms)
+
+2026-05-28T10:05:22Z ERROR Duplicate payment detected user_id=42 transaction_id=xyz999
+2026-05-28T10:05:23Z INFO rollback initiated for transaction xyz999
+
+2026-05-28T10:10:00Z CRITICAL payment failure rate exceeded 5%
+2026-05-28T10:10:01Z ALERT circuit breaker OPEN for bank-api
