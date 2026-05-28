@@ -4,6 +4,6 @@ from openai import OpenAI
 
 def get_client():
     return OpenAI(
-        api_key=os.getenv("sk-3cUlsgtJ9n3Bds6KU9K3nCLyVL995mgWW3pHWK9C1JVwqcKq"),
-        base_url=os.getenv("OPENAI_BASE_URL", "https://api.gapgpt.app/v1")
+        api_key=os.getenv("your_api_key_here"),
+        base_url=os.getenv("OPENAI_BASE_URL", "your_open_ai_url_here")
     )
