@@ -90,7 +90,7 @@ ollama run llama3
 ### 4. Build FAISS index
 
 ```bash
-python embed.py
+python ingestion/run_ingestion.py
 ```
 
 ---
