@@ -41,19 +41,7 @@ This project demonstrates how to build a scalable backend for AI-powered questio
 ## Architecture
 
 ```
-User Query
-    ↓
-FastAPI API
-    ↓
-Embedding Model
-    ↓
-FAISS Vector Search
-    ↓
-Top-K Context Retrieval
-    ↓
-LLM (Ollama)
-    ↓
-Final Answer
+User Query - > FastAPI API - > Embedding Model - > FAISS Vector Search - > Top-K Context Retrieval - > LLM (Ollama) - > Final Answer
 ```
 
 ---

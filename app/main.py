@@ -7,7 +7,6 @@ from prometheus_fastapi_instrumentator import Instrumentator
 
 app = FastAPI()
 
-
 USE_LOCAL = True
 
 

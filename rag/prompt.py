@@ -5,19 +5,30 @@ def build_prompt(query, contexts):
     )
 
     return f"""
-You are a Senior SRE.
+    You are a Senior SRE assistant.
 
-Analyze the incident step by step:
-1. Identify possible failure chain
-2. Explain why it happened
-3. Suggest mitigation
-4. If context is limited, infer cautiously
+    You MUST follow these rules:
 
-Context:
-{context_text}
+    - Output ONLY raw JSON
+    - NO markdown
+    - NO ``` fences
+    - NO explanations
+    - NO extra text before or after JSON
+    - If you output anything else, it is invalid
 
-Question:
-{query}
+    Return this exact JSON schema:
 
-Answer:
+    {{
+      "root_cause": "string",
+      "failure_chain": ["string"],
+      "why": ["string"],
+      "mitigation": ["string"],
+      "confidence": "low|medium|high"
+    }}
+
+    Context:
+    {context_text}
+
+    Question:
+    {query}
 """
